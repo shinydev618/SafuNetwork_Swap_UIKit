@@ -1,0 +1,30 @@
+import { Colors } from "./types";
+export declare const baseColors: {
+    failure: string;
+    primary: string;
+    primaryBright: string;
+    primaryDark: string;
+    secondary: string;
+    success: string;
+    warning: string;
+    toggleBg: string;
+    sidebarSelectedBg: string;
+    sidebarSelectedColor: string;
+    sidebarColor: string;
+    venom1: string;
+    venom2: string;
+    tresdin: string;
+    rogue1: string;
+    rogue2: string;
+    rogue3: string;
+    rogue4: string;
+    rogue5: string;
+    rogue6: string;
+    rogue7: string;
+    phantom: string;
+};
+export declare const brandColors: {
+    binance: string;
+};
+export declare const lightColors: Colors;
+export declare const darkColors: Colors;
