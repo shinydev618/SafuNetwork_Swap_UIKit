@@ -2,33 +2,14 @@ import { Colors } from "./types";
 
 export const baseColors = {
   failure: "#ED4B9E",
-  primary: "#3AC125",
-    
+  primary: "#2594e1",
   primaryBright: "lightgreen",
   primaryDark: "#0098A1",
   secondary: "#7645D9",
   success: "#31D0AA",
   warning: "#FFB237",
-  toggleBg: "#F1F1F1",
-  sidebarSelectedBg: "#3AC125",
-  sidebarSelectedColor: "#FFFFFF",
-  sidebarColor: "#A4A5A6",
-
-  venom1  : "#3AC125",
-  venom2  : "#1DC872",
-  tresdin : "#461B00",
-
-  //Sven's color
-  rogue1  : "#07162d",
-  rogue2  : "#4877BC",
-  rogue3  : "#508be0",
-  rogue4  : "#6781a8",
-  rogue5  : "#C8D4E6",
-  rogue6  : "#E5EAF2",
-  rogue7  : "#708db7",
-
-  phantom: "#869AB8",
 };
+
 export const brandColors = {
   binance: "#F0B90B",
 };
@@ -36,8 +17,13 @@ export const brandColors = {
 export const lightColors: Colors = {
   ...baseColors,
   ...brandColors,
-  logoTextColor: "#461B00",
-  themeSwitcherColor: "#3F8CFF",
+  shadow1: "#afb5d0",
+  topBottomBorder: "#5051f7",
+  sidebarColor: "#414177",
+  sidebarChildColor: "#050548",
+  sidebarChildBack: "transparent",
+  sidebarChildShadow: "rgba(6,6,56,.35)",
+  gearBack: "#414076",
   background: "#FAF9FA",
   backgroundDisabled: "#E9EAEB",
   contrast: "#191326",
@@ -45,7 +31,7 @@ export const lightColors: Colors = {
   input: "#eeeaf4",
   inputSecondary: "#d7caec",
   tertiary: "#EFF4F5",
-  text: "#452A7A",
+  text: "#414076",
   textDisabled: "#BDC2C4",
   textSubtle: "#8f80ba",
   borderColor: "#E9EAEB",
@@ -58,8 +44,13 @@ export const lightColors: Colors = {
 export const darkColors: Colors = {
   ...baseColors,
   ...brandColors,
-  logoTextColor: "#FFFFFF",
-  themeSwitcherColor: "#FFFFFF",
+  shadow1: "#afb5d0",
+  topBottomBorder: "#5051f7",
+  sidebarColor: "#ffffff",
+  sidebarChildColor: "#00000b",
+  sidebarChildBack: "transparent",
+  sidebarChildShadow: "rgba(6,6,56,.35)",
+  gearBack: "#414076",
   secondary: "#9A6AFF",
   background: "#100C18",
   backgroundDisabled: "#3c3742",
@@ -69,11 +60,11 @@ export const darkColors: Colors = {
   inputSecondary: "#66578D",
   primaryDark: "#0098A1",
   tertiary: "#353547",
-  text: "#EAE2FC",
+  text: "#FFFFFF",
   textDisabled: "#666171",
   textSubtle: "#A28BD4",
   borderColor: "#524B63",
-  card: "#1B2A4E",
+  card: "#27262c",
   gradients: {
     bubblegum: "linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%)",
   },

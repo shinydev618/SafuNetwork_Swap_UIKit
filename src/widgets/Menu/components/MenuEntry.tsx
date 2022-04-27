@@ -5,7 +5,6 @@ import { MENU_ENTRY_HEIGHT } from "../config";
 export interface Props {
   secondary?: boolean;
   isActive?: boolean;
-  isPushed?: boolean;
   theme: DefaultTheme;
 }
 
@@ -19,12 +18,10 @@ const rainbowAnimation = keyframes`
   }
 `;
 
-const LinkLabel = styled.div<{ isPushed: boolean, isActive:boolean; }>`
-  color: ${({ isActive, isPushed, theme }) => (isPushed ? (isActive ? theme.colors.sidebarSelectedColor : theme.colors.sidebarColor) : "transparent")};
+const LinkLabel = styled.div<{ isPushed: boolean }>`
+  color: ${({ isPushed, theme }) => (isPushed ? theme.colors.primary : "transparent")};
   transition: color 0.4s;
   flex-grow: 1;
-  font-size: 16px;
-  font-family: Rflex_Regular;
 `;
 
 const MenuEntry = styled.div<Props>`
@@ -32,16 +29,12 @@ const MenuEntry = styled.div<Props>`
   display: flex;
   align-items: center;
   height: ${MENU_ENTRY_HEIGHT}px;
-  margin: ${({ secondary }) => (secondary ? "0 32px" : "0 16px")};
-  padding: ${({ isPushed }) => (isPushed ? "0 9px" : "0 12px")};
-  font-size: ${({ secondary }) => (secondary ? "14px" : "16px")};
-  border-radius: 10px;
-  background-color: ${({ secondary, isActive,  theme }) => {
-    return (isActive) ? theme.colors.sidebarSelectedBg : "transparent" ;
-  }};
-  color: ${({ isActive, theme }) => (isActive ? theme.colors.sidebarSelectedColor : theme.colors.sidebarColor)};
+  padding: ${({ secondary }) => (secondary ? "0 32px" : "0 16px 0 28px")};
+  font-size: 14.63px;
+  background-color: ${({ secondary, theme }) => (secondary ? theme.colors.background : "transparent")};
 
   a {
+    color: ${({ theme }) => theme.colors.sidebarChildColor};
     display: flex;
     align-items: center;
     width: 100%;
@@ -49,22 +42,13 @@ const MenuEntry = styled.div<Props>`
   }
 
   svg {
-    fill: ${({ isActive, theme }) => (isActive ? theme.colors.sidebarSelectedColor : theme.colors.sidebarColor)};
-  }
-
-  &:hover {
-    // background-color: ${({ theme }) => theme.colors.tertiary};
+    fill: ${({ theme }) => theme.colors.primary};
+    width: 18px;
+    height: 18px;
   }
 
   // Safari fix
   flex-shrink: 0;
-
-  &.rainbow {
-    background-clip: text;
-    animation: ${rainbowAnimation} 3s ease-in-out infinite;
-    background: ${({ theme }) => theme.colors.gradients.bubblegum};
-    background-size: 400% 100%;
-  }
 `;
 MenuEntry.defaultProps = {
   secondary: false,
@@ -72,6 +56,6 @@ MenuEntry.defaultProps = {
   role: "button",
 };
 
-const LinkLabelMemo = React.memo(LinkLabel, (prev, next) => prev.isPushed === next.isPushed && prev.isActive === next.isActive);
+const LinkLabelMemo = React.memo(LinkLabel, (prev, next) => prev.isPushed === next.isPushed);
 
 export { MenuEntry, LinkLabelMemo as LinkLabel };

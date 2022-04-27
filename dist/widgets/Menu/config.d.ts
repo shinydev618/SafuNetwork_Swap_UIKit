@@ -3,6 +3,7 @@ export declare const links: ({
     icon: string;
     href: string;
     items?: undefined;
+    calloutClass?: undefined;
 } | {
     label: string;
     icon: string;
@@ -10,6 +11,16 @@ export declare const links: ({
         label: string;
         href: string;
     }[];
+    href?: undefined;
+    calloutClass?: undefined;
+} | {
+    label: string;
+    icon: string;
+    items: {
+        label: string;
+        href: string;
+    }[];
+    calloutClass: string;
     href?: undefined;
 })[];
 export declare const socials: ({
@@ -26,7 +37,7 @@ export declare const socials: ({
     href: string;
     items?: undefined;
 })[];
-export declare const MENU_HEIGHT = 64;
-export declare const MENU_ENTRY_HEIGHT = 48;
+export declare const MENU_HEIGHT = 0;
+export declare const MENU_ENTRY_HEIGHT = 40;
 export declare const SIDEBAR_WIDTH_FULL = 240;
-export declare const SIDEBAR_WIDTH_REDUCED = 74;
+export declare const SIDEBAR_WIDTH_REDUCED = 56;

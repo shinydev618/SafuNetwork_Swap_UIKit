@@ -1,3 +1,6 @@
 import React from "react";
-declare const _default: React.MemoExoticComponent<({}: any) => JSX.Element>;
+interface Props {
+    imgs: any;
+}
+declare const _default: React.NamedExoticComponent<Props>;
 export default _default;

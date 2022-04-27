@@ -3,12 +3,10 @@ import { DefaultTheme } from "styled-components";
 export interface Props {
     secondary?: boolean;
     isActive?: boolean;
-    isPushed?: boolean;
     theme: DefaultTheme;
 }
 declare const MenuEntry: import("styled-components").StyledComponent<"div", DefaultTheme, Props, never>;
 declare const LinkLabelMemo: React.MemoExoticComponent<import("styled-components").StyledComponent<"div", DefaultTheme, {
     isPushed: boolean;
-    isActive: boolean;
 }, never>>;
 export { MenuEntry, LinkLabelMemo as LinkLabel };

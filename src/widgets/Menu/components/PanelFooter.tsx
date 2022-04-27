@@ -8,7 +8,6 @@ import CakePrice from "./CakePrice";
 import ThemeSwitcher from "./ThemeSwitcher";
 import SocialLinks from "./SocialLinks";
 import LangSelector from "./LangSelector";
-import { Toggle } from "../../../components/Toggle";
 
 interface Props extends PanelProps, PushedProps {}
 
@@ -20,7 +19,6 @@ const Container = styled.div`
 `;
 
 const SettingsEntry = styled.div`
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -36,13 +34,6 @@ const SocialEntry = styled.div`
   padding: 0 16px;
 `;
 
-const ToggleWrapper = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-`;
-
 const PanelFooter: React.FC<Props> = ({
   isPushed,
   pushNav,
@@ -55,17 +46,23 @@ const PanelFooter: React.FC<Props> = ({
 }) => {
   if (!isPushed) {
     return (
-      <Container />
+      <Container>
+        <IconButton variant="text" onClick={() => pushNav(true)}>
+          <CogIcon />
+        </IconButton>
+      </Container>
     );
   }
 
   return (
     <Container>
+      <SocialEntry>
+        <CakePrice cakePriceUsd={cakePriceUsd} />
+        {/* <SocialLinks /> */}
+      </SocialEntry>
       <SettingsEntry>
-        <ThemeSwitcher isDark={isDark} />
-        <ToggleWrapper>
-          <Toggle scale='sm' checked={isDark} onClick={() => toggleTheme(!isDark)}/>
-        </ToggleWrapper>
+        <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} />
+        <LangSelector currentLang={currentLang} langs={langs} setLang={setLang} />
       </SettingsEntry>
     </Container>
   );

@@ -5,46 +5,68 @@ export const links = [
     href: "/",
   },
   {
-    label: "Exchange",
+    label: "Trade",
     icon: "TradeIcon",
-    href: "/swap",
+    items: [
+      {
+        label: "Exchange",
+        href: "https://exchange.pancakeswap.finance",
+      },
+      {
+        label: "Liquidity",
+        href: "https://exchange.pancakeswap.finance/#/pool",
+      },
+    ],
   },
   {
-    label: "Liquidity",
-    icon: "LiquidityIcon",
-    href: "/pool",
-  },
-  {
-    label: "Farms",
-    icon: "FarmIcon",
+    label: "Earning",
+    icon: "EarningIcon",
     href: "/farms",
   },
   {
-    label: "Referral program",
-    icon: "ReferralIcon",
-    href: "/referral",
+    label: "NFT Marketplace",
+    icon: "NFTIcon",
+    href: "/syrup",
   },
   {
-    label: "More",
-    icon: "MoreIcon",
+    label: "SpaceGrime Gallery",
+    icon: "GalleryIcon",
+    href: "/lottery",
+  },
+  {
+    label: "Launchpad",
+    icon: "LaunchpadIcon",
+    href: "/nft",
+  },
+  {
+    label: "Gamification",
+    icon: "GamificationIcon",
+    href: "/nft",
+  },
+  {
+    label: "ETH2.0",
+    icon: "ETHIcon",
+    href: "/nft",
+  },
+  {
+    label: "Info",
+    icon: "InfoIcon",
+    href: "/nft",
+  },
+  {
+    label: "Contact",
+    icon: "ContactIcon",
     items: [
       {
-        label: "Voting",
-        href: "https://voting.pancakeswap.finance",
+        label: "Twitter",
+        href: "/teams",
       },
       {
-        label: "Github",
-        href: "https://github.com/pancakeswap",
-      },
-      {
-        label: "Docs",
-        href: "https://docs.pancakeswap.finance",
-      },
-      {
-        label: "Blog",
-        href: "https://pancakeswap.medium.com",
+        label: "Telegram",
+        href: "/",
       },
     ],
+    calloutClass: "rainbow",
   },
 ];
 
@@ -55,18 +77,18 @@ export const socials = [
     items: [
       {
         label: "English",
-        href: "https://web.telegram.org/#/im?p=%4birbswapdex",
+        href: "https://web.telegram.org/#/im?p=%4spacegrimedexdex",
       },
     ],
   },
   {
     label: "Twitter",
     icon: "TwitterIcon",
-    href: " https://twitter.com/birbswapdex",
+    href: " https://twitter.com/spacegrimedexdex",
   },
 ];
 
-export const MENU_HEIGHT = 64;
-export const MENU_ENTRY_HEIGHT = 48;
+export const MENU_HEIGHT = 0;
+export const MENU_ENTRY_HEIGHT = 40;
 export const SIDEBAR_WIDTH_FULL = 240;
-export const SIDEBAR_WIDTH_REDUCED = 74;
+export const SIDEBAR_WIDTH_REDUCED = 56;

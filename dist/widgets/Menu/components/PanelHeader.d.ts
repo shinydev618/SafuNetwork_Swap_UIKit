@@ -1,3 +1,6 @@
 import React from 'react';
-declare const PanelHeader: React.FC;
+interface Props {
+    imgs: any;
+}
+declare const PanelHeader: React.FC<Props>;
 export default PanelHeader;

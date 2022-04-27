@@ -27,7 +27,12 @@ const AccordionContent = styled.div<{ isOpen: boolean; isPushed: boolean; maxHei
   overflow: hidden;
   border-color: ${({ isOpen, isPushed }) => (isOpen && isPushed ? "rgba(133, 133, 133, 0.1)" : "transparent")};
   border-style: solid;
-  border-width: 1px 0;
+  box-shadow: 4px 17px 46px 1px ${({ theme }) => theme.colors.sidebarChildShadow};
+  >div {
+    background: ${({ theme }) => theme.colors.sidebarChildBack};
+    padding-left: 65px;
+    height: 30px !important;
+  }
 `;
 
 const Accordion: React.FC<Props> = ({
@@ -56,7 +61,7 @@ const Accordion: React.FC<Props> = ({
       <MenuEntry onClick={handleClick} className={className} isActive={isActive}>
         {icon}
         <LinkLabel isPushed={isPushed}>{label}</LinkLabel>
-        {isOpen ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
+        {/* {isOpen ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />} */}
       </MenuEntry>
       <AccordionContent
         isOpen={isOpen}

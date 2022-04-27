@@ -1,27 +1,25 @@
-import React from 'react';
-import styled from 'styled-components';
-import { LogoIcon } from '../../../components/Svg';
+import React from 'react'
+import { Box } from '../../../components/Box'
+import styled from 'styled-components'
 
-const Container = styled.div`
-    padding: 30px;
-    display: flex;
-`;
+// import AstroLight from '../img/Astronaut-Light.png'
 
-const LogoText = styled.span`
-    color: ${({ theme }) => theme.colors.logoTextColor};
-    font-size: 45px;
-    margin-left: 10px;
-    font-family: Comic Sans MS;
-    font-weight: bold;
-`;
-
-const PanelHeader: React.FC = () => {
-    return (
-        <Container>
-            <LogoIcon className="header-logo-icon" width='55px' height='55px' />
-            <LogoText>Birb</LogoText>
-        </Container>
-    );
+interface Props {
+    imgs: any;
 }
 
-export default PanelHeader;
+const StyledContainer = styled(Box)`
+    user-select: none;
+    pointer-events: none;
+    z-index: 1;
+`
+
+const PanelHeader: React.FC<Props> = ({ imgs }) => {
+    return (
+        <StyledContainer position='absolute'>
+            <img src={imgs && imgs[0]} alt='' width='352px' />
+        </StyledContainer>
+    )
+}
+
+export default PanelHeader

@@ -6,11 +6,11 @@ export const scaleVariants = {
     padding: "0 24px",
   },
   [scales.SM]: {
-    height: "32px",
-    padding: "0 16px",
+    height: "40px",
+    padding: "0 20px",
   },
   [scales.XS]: {
-    height: "20px",
+    height: "32px",
     fontSize: "12px",
     padding: "0 8px",
   },

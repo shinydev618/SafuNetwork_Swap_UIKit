@@ -32,6 +32,14 @@ export type Gradients = {
 };
 
 export type Colors = {
+  shadow1: string;
+  topBottomBorder: string;
+  sidebarColor: string;
+  sidebarChildColor: string;
+  sidebarChildBack: string;
+  sidebarChildShadow: string;
+  gearBack: string;
+  
   primary: string;
   primaryBright: string;
   primaryDark: string;
@@ -40,31 +48,12 @@ export type Colors = {
   success: string;
   failure: string;
   warning: string;
-
-  toggleBg: string;
-  sidebarSelectedBg: string;
-  sidebarSelectedColor: string;
-  sidebarColor: string;
-  venom1: string;
-  venom2: string;
-  tresdin: string;
-  rogue1: string;
-  rogue2: string;
-  rogue3: string;
-  rogue4: string;
-  rogue5: string;
-  rogue6: string;
-  rogue7: string;
-  phantom: string;
-
-  logoTextColor: string;
   contrast: string;
   invertedContrast: string;
   input: string;
   inputSecondary: string;
   background: string;
   backgroundDisabled: string;
-  themeSwitcherColor: string;
   text: string;
   textDisabled: string;
   textSubtle: string;
